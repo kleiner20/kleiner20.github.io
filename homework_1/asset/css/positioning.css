@@ -1,39 +1,86 @@
- {
+{
   box-sizing: border-box;
 }
 
-body {
-  font-size: 24px;
-  line-height: 32px;
-  color: #333;
-}
+
 
 #name {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 40px;
+  position: absolute;
+  width: 220px;
+  left: 197px;
+  padding: 20px;
   margin: 0;
-  text-align: center;
-  background: #eee;
+  background-color: #4aaaa5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font: bold;
+  color: white;
+  font-size: 25px;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+li {
+  display: inline;
+  font-size: 15px;
+  color: black;
+  
+
+  }
+  #links {
+    position: absolute;
+    top: 35px;
+    right: 200px;
+    
+  }
+  a {
+    font-size: 20px;
+    padding: 10px;
+    color: #777777;
+    text-decoration: none;
+  }
+
+
+body {
+  width: 100%;
+  height: 925px;
+      font-size: 24px;
+    line-height: 32px;
+    color: #333;
+    background-color:#dddddd;
+  }
+
+
+
 
 .wrapper {
-  width: 600px;
+  position: relative;
+  top: 100px;
+  width: 960px;
+  height: 725px;
   padding: 20px;
   margin: 0 auto;
+  background-color: #ffffff;
+  
 }
 
 h1 {
-  margin-bottom: 20px;
+  Position: relative
+  margin-bottom: 0px;
   font-size: 36px;
   line-height: 45px;
+  color:  #4aaaa5;
+  Padding-bottom: 5px;
+  
 }
 
 p {
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 28px;
+  color: #777777;
 }
 
 #relative {
@@ -47,10 +94,86 @@ p {
 
 #absolute {
   position: absolute;
-  right: -30px;
+  right: 0px;
   bottom: 0;
   width: 250px;
   padding: 20px;
   text-align: center;
   background: #4aaaa5;
+}
+img {
+  float: left;
+  max-width: 240px;
+  left: 0px;
+  align: left;
+  margin: 20px;
+  margin-left: 0px;
+  position: relative;
+  text-align: left;
+}
+label {
+color: #777777;
+font-size: 18px;
+
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 80px;
+  background-color: #4aaaa5;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: 4aaaa5;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+}
+
+textarea {
+  width: 100%;
+}
+/* Enter new info here*/
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 180px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: #777777;
 }
