@@ -110,6 +110,11 @@ img {
   position: relative;
   text-align: left;
 }
+label {
+color: #777777;
+font-size: 18px;
+
+}
 
 input[type=text], select {
   width: 100%;
@@ -132,11 +137,15 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+
 }
 
 div.container {
   border-radius: 5px;
   background-color: 4aaaa5;
   padding: 20px;
+}
+
+textarea {
+  width: 100%;
+}
