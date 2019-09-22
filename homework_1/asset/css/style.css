@@ -58,7 +58,7 @@ body {
   position: relative;
   top: 100px;
   width: 960px;
-  height: 400px;
+  height: 570px;
   padding: 20px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -110,3 +110,33 @@ img {
   position: relative;
   text-align: left;
 }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 80px;
+  background-color: #4aaaa5;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: 4aaaa5;
+  padding: 20px;
