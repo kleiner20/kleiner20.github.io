@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+  <!-- Provided Code-->
+  <!-- <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <h2>Generate a Password</h2>
+    <textarea
+      readonly
+      id="password"
+      placeholder="Your Secure Password"
+      aria-label="Generated Password"
+    ></textarea>
+    <button id="generate">Generate Password</button>
+    <button id="copy">
+      Copy to Clipboard
+    </button>
+  </body>
+</html> -->
+
+<body>  <!--My Code-->
+
+<div class="container">  
+
+<div class="jumbotron">
+    
+    <h1 class="display-4">Password Generator</h1>
+    
+    <div class="container">
+
+    <p class="lead">Generate a password</p>
+    <hr class="my-4">
+    <textarea>
+      readonly
+      id="password"
+      placeholder="Your Secure Password"
+      aria-label="Generated Password"
+    </textarea>
+    <div class="row">  
+    <a class="btn btn-primary btn-lg btn-color" id="play" href="#" role="button">Generate Password</a>
+    
+    <div style="text-align: center"> <!--Only to split the buttons-->
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+            <div class="divider">
+            <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+
+    <a class="btn btn-primary btn-lg" href="#" role="button">Copy to Clipboard</a>
+  </div>
+</container>
+  </div>
+  <script src="assets/JavaScript.js"></script>
+</body>
+</html>
