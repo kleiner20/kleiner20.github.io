@@ -1,0 +1,53 @@
+
+
+.jumbotron {
+/* position: relative; */
+min-width: 585px;
+margin: 10px auto;
+display: flex;
+justify-content: center;
+margin: 10px 10px 10px 10px;
+border: 0.08em solid black;
+}
+
+.container {
+background-color: white;
+}
+
+.btn-primary {
+padding: 10px;
+background-color: purple;
+margin: 0 auto;
+text-align: center;
+margin-top: 50px;
+}
+.quizLinks{
+padding: 10px;
+margin: 0 auto;
+text-align: center;
+}
+
+.appendHere {
+    padding: 10px;
+    Color: Purple;
+    margin: 0 auto;
+    text-align: center;
+    font: xx-large;
+    }
+.divider{
+    width:50px;
+    height:auto;
+    display:inline-block;  
+}
+
+.timer{
+    float: right;
+    font: bold;
+}
+.highScores{
+    float: left;
+    font: bold;
+}
+a {
+background-color: purple;
+}

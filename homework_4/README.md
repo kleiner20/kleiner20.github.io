@@ -1,3 +1,11 @@
+Trivia Game
+
+Random questions to know what is right in this world!  According to Keith.
+
+You have 5 random questions to answer in 75 seconds with a 15 second penalty!
+
+Good luck!
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/kleiner20/kleiner20.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
