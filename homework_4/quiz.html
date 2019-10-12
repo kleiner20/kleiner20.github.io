@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -19,17 +19,23 @@
     
     <div class="container">
 
-    <p class="highScores" onclick="visitScores();">High Scores</p>
-    <p class="timer">Timer: 75</p>
+    <p class="highScores quizLinks" onclick="visitScores();">High Scores</p>
+
+
+    <p class="timer quizLinks">Timer: 75</p>
     
-<!-- 
-    <div class="row">  
-    <a class="btn btn-primary btn-lg btn-color lft-btn" id="play" href="#" role="button">Start the Quiz</a>
+    <div id="quiz">Quiz questions to show here</div>
+    <div id="choices">
+        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+    </div>
     
-    <a class="btn btn-primary btn-lg btn-color" href="#" role="button" onclick="visitScores();">See High Scores</a>
-  </div> -->
+      <div id="results"></div>  
 </container>
+
   </div>
+  <button id="submit">Submit Quiz</button>
   <script src="assets/javaScript.js"></script>
 </body>
 </html>

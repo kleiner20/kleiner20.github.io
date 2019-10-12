@@ -51,3 +51,10 @@ text-align: center;
 a {
 background-color: purple;
 }
+
+#quiz{
+  text-align: center;  
+}
+#results{
+    text-align: center;  
+  }
