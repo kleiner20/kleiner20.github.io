@@ -1,12 +1,13 @@
 var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('results');
-var quizButton = document.getElementById('start'); //done
+// var enterQuestion = document.getElementById('question');
+var quizButton = document.getElementById('qBtn'); //done
 
 var question = document.getElementById('#question'); 
 
 
    //Questions and answers saved in an object
-   var questions = [
+var questions = [];
+   questions = [
     {
       title: "The best team in the NFL is...:",
       choices: ["Cowboys", "Vikings", "Packers",],
@@ -40,26 +41,41 @@ var question = document.getElementById('#question');
    }
    function buildQuiz(){
    }
-   function startQuiz(){
+   function startQuiz(){                  //Start of the quiz page
    location.href='quiz.html';
    }
+   
+   
+  //  "lastname - " +  frndLst[onefrnd].lastName + " and phoneNumber " + frndLst[onefrnd].phoneNumber ;
+
+   
+  //  for (i = 0; i < questions.length; i++) {
+    // enterQuestion.innerHTML(questions.title[0]);
+   
+
+   function startQ(){                  //Start of the quiz page
+    console.log("Test");
+      quiz.getElementById("question").innerHTML = "Hello World";
+    }
+   
+  //  questions.title[0];
    // display quiz right away
 //    buildQuiz();
 
     // on submit, show results
-    quizButton.addEventListener('click', startQuiz);
+    // quizButton.addEventListener('click', startQ(){
+    // }
+    // });
    
    // on submit, show results
-   submitButton.addEventListener('click', showResults);
-
-   var i;
-   for (i = 0; i < questions.length; i++) {
-     question.innerHTML = questions.title[i];
-     answer1.innerHTML = questions.title.choices[i];
-     i + 1;
-     answer2.innerHTML = questions.title[i];
-     i + 1
-     answer3.innerHTML = questions.title[i];
+  //  submitButton.addEventListener('click', showResults
      
-   }
+    //   question.innerHTML = questions.title[i];
+    //  answer1.innerHTML = questions.title.choices[i];
+    //  i + 1;
+    //  answer2.innerHTML = questions.title[i];
+    //  i + 1
+    //  answer3.innerHTML = questions.title[i];
+     
+   
   

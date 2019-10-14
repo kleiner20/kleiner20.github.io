@@ -61,3 +61,6 @@ background-color: purple;
 #results{
     display: inline-block;  
   }
+  .qBtn{
+        text-align: center ;
+  }
