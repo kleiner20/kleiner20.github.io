@@ -55,6 +55,9 @@ background-color: purple;
 #quiz{
   text-align: center;  
 }
+#wrapper{
+    text-align: center;
+}
 #results{
-    text-align: center;  
+    display: inline-block;  
   }
