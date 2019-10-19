@@ -9,26 +9,31 @@ var question = document.getElementById('#question');
 var questions = [];
    questions = [
     {
+      
       title: "The best team in the NFL is...:",
       choices: ["Cowboys", "Vikings", "Packers",],
-      answer: "Packers"
+      answer: "Packers",
     },
     {
+      
       title: "Where is the best place to scooter or ride your bike?",
       choices: ["street", "sidewalk", "jumps"],
-      answer: "sidewalk"
+      answer: "sidewalk",
     },
     {
+        
         title: "Best activity on a rainy day?",
         choices: ["movie", "boardgames", "reading"],
         answer: "boardgames"
       },
       {
+        
         title: "What is the best kind of choclate?",
         choices: ["white", "milk", "dark"],
         answer: "dark"
       },
       {
+        
         title: "Who is the funniest comedia?",
         choices: ["Martin Lawrence", "Kevin Hart", "Dave Chapelle"],
         answer: "Kevin Hart"
@@ -55,7 +60,7 @@ var questions = [];
 
    function startQ(){                  //Start of the quiz page
     console.log("Test");
-      quiz.getElementById("question").innerHTML = "Hello World";
+      document.getElementById("question").innerHTML = questions[0].title;
     }
    
   //  questions.title[0];

@@ -1,0 +1,30 @@
+
+.fields{
+	padding: 10px 2px;
+	width: 100%;
+	/* background:red; */
+	text-align: center;
+}
+
+.time{
+margin: 10px;
+
+}
+
+.btn{
+margin-right: 50px;
+
+}
+input{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+
+label{
+	margin: 10px;
+}
+
+#displayDate{
+	text-align: center;
+}
