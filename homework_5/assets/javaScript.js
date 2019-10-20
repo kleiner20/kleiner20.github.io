@@ -1,3 +1,5 @@
+//Discovered I could skip this with JQuery
+
 // var nineInput = document.querySelector("#nineInput");
 // var tenInput = document.querySelector("#tenInput");
 // var elevenInput = document.querySelector("#elevenInput");
@@ -15,7 +17,23 @@
 var today = moment().format( 'dddd, MMMM Do')
 $('#displayDate').text(today);
 
-//If statement to color 
+
+//Present Today's date
+var today = moment().format( 'dddd, MMMM Do');
+$('#displayDate').text(today);
+
+//If statement to color code rows
+var todaysTime = moment().format('LT');
+
+var nine = "hh:mm:ss";
+nine = '09:00 am';
+
+console.log(todaysTime);
+console.log(nine);
+
+ //Can't solve the comparing times to change background
+
+//Need to set variable to time and compare in loop
 
 
 
@@ -64,7 +82,7 @@ function saveSettings() {
     fromLocal = JSON.parse(window.localStorage.getItem(schedule.nineActivity));
     console.log(fromLocal);
 });
-
+// Was attempting to create object
 var schedule = {
   nineActivity: nineInput.value,
   tenActivity: tenInput.value,
