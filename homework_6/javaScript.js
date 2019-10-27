@@ -1,24 +1,65 @@
+// {/* <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> */}
+
 var key = '5e1b8125a4ec0966dda40975e02231da';
 var cities = ["Minneapolis", "Milwaukee"];
+var todaysDate = moment().format('ll');
+
+
+// var randomFormat = "MM/DD/YYYY";
 
 function drawWeather(data) {
-	var celcius = Math.round(parseFloat(data.main.temp)-273.15);
-	var fahrenheit = Math.round(((parseFloat(data.main.temp)-273.15)*1.8)+32); 
-	
-	document.getElementById('humidity').innerHTML = data.weather[0].description; //fix
-    document.getElementById('temp').innerHTML = celcius + '&deg;'; //done
-    $('#temp').text(celcius + '&deg')
-    document.getElementById('windSpeed').innerHTML = data.name;  //fix
-    document.getElementById('uvIndex').innerHTML = data.name;  //fix
-}
 
+  console.log(data);
+  console.log(todaysDate);
+  console.log("2nd Console ", data.main.temp);
+  console.log(data.main.humidity);
+  console.log(data.main.name);
+  
+	var celcius = Math.round(parseFloat(data.main.temp)-273.15);
+  var fahrenheit = Math.round(((parseFloat(data.main.temp)-273.15)*1.8)+32); 
+
+  var humidity = data.main.humidity;
+  var windSpeed = data.wind.speed;
+  var uvIndex = // need to get
+
+  console.log(humidity);
+  console.log(windSpeed);
+  console.log(uvIndex);
+  // console.log(celcius);
+
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET"
+  // }).then(function(response) {
+	
+	// document.getElementById('humidity').innerHTML = data.weather[0].description; 
+  //   document.getElementById('temp').innerHTML = celcius + '&deg;'; 
+  $('#cityAndDate').text(data.name + " - " + todaysDate);
+
+    $('#temp').text("Temperture: "+ celcius + " Celcius, " + fahrenheit + " Fahrenheit");
+    $('#humidity').text("Humidity: "+ humidity + "%");
+
+    $('#windSpeed').text("Wind Speed: " + windSpeed + " km/hr"); 
+    // document.getElementById('uvIndex').innerHTML = data.name;  
+// });
+}
 function gettingJSON(cityName){
 
-    console.log("jquery loaded");
+    console.log(cityName);
     $.get("https://api.openweathermap.org/data/2.5/weather?q=" + cityName+ "&appid=" + key,function(json){
-
+        console.log("first data");
+       
+        // var myData = JSON.parse(json);
         console.log("data:", JSON.stringify(json));
-        var data = JSON.stringify(json);
+        console.log(json);
+        var data = json;
+        console.log(data.main.temp);
+        // console.log(data);
+        console.log("type of: " + typeof json);
+        // console.log("type of: " + typeof data);
+
+
+        
         drawWeather(data);
     });
 }
@@ -74,31 +115,71 @@ function gettingJSON(cityName){
 
       });
       renderButtons();
+      // displayWeatherInfo();
 
+// displayweatherInfo function re-renders the HTML to display the appropriate content
+// function displayWeatherInfo() {
 
+//   var newCitySearch = $(this).attr("data-name");
+//   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + newCitySearch+ "&appid=" + key
 
+//   // Creating an AJAX call for the specific weather button being clicked
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   }).then(function(response) {
 
+//     // Creating a div to hold the weather
+//     // var weatherDiv = $("<div class='weather'>");
 
+//     // Storing the temperture data
+//     var temperture = response.main.temp;
 
-      // Calling the renderButtons function at least once to display the initial list of cities
-      
-      
-// // Initial array of citys
-//         var citys = ["Minneapolis", "Milwaukee"];
+//     // Creating an element to have the temperture displayed
+//     $("temp").text("Temperture: " + temperture);         //**leave off here
 
+    // Displaying the temperture
+    // weatherDiv.append(pOne);
 
+//---------------------------------------------------
 
+    // // Storing the release year
+    // var released = response.Released;
 
-// function weatherBalloon( cityID ) {
+    // // Creating an element to hold the release year
+    // var pTwo = $("<p>").text("Released: " + released);
 
-// 	$.get('https://api.openweathermap.org/data/2.5/weather?q=' + cityName+ '&appid=' + key)  
-// 	.then(function(resp) { return resp.json() }) // Convert data to json
-// 	.then(function(data) {
-// 		drawWeather(data); // Call drawWeather
-// 	})
-// 	.catch(function() {
-//         // catch any errors
-//     console.log()
-// 	});
+    // // Displaying the release year
+    // weatherDiv.append(pTwo);
+
+    // // Storing the plot
+    // var plot = response.Plot;
+
+    // // Creating an element to hold the plot
+    // var pThree = $("<p>").text("Plot: " + plot);
+
+    // // Appending the plot
+    // weatherDiv.append(pThree);
+
+    // // Retrieving the URL for the image
+    // var imgURL = response.Poster;
+
+    // // Creating an element to hold the image
+    // var image = $("<img>").attr("src", imgURL);
+
+    // // Appending the image
+    // weatherDiv.append(image);
+
+    // // Putting the entire weather above the previous weathers
+    // $("#weathers-view").prepend(weatherDiv);
+  // });
+
 // }
-// weatherBalloon( "Atlanta" );
+
+
+
+
+      
+
+
+

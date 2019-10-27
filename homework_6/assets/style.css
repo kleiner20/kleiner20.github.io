@@ -48,7 +48,7 @@ p {
 }
 .weatherInfo{
 border-color: black;
-font-size: 15px;
+font-size: 16px;
 line-height: 3.25;
 width: 60%;
 height: 325px;  
@@ -64,4 +64,7 @@ margin: 10px;
     font-size: 30px;
     font: Bolder;
     padding: 0px;
+}
+#large{
+  font-size: 30px;
 }
