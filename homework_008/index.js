@@ -8,13 +8,13 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "name",
-      message: "What is your name?"
+      name: "github",
+      message: "Enter your GitHub Username"
     },
     {
       type: "input",
-      name: "location",
-      message: "Where are you from?"
+      name: "color",
+      message: "What is your favorite color?"
     },
     {
       type: "input",
@@ -28,17 +28,20 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "github",
-      message: "Enter your GitHub Username"
-    },
-    {
-      type: "input",
       name: "linkedin",
       message: "Enter your LinkedIn URL."
     }
   ]);
 }
+function getProfile(answers){
 
+  const queryUrl = "https://api.github.com/users/" + answers.github;
+
+  console.log(queryUrl);
+ 
+  var githubToken = process.env.GITHUB_TOKEN;
+ 
+ };
 function generateHTML(answers) {
   return `
 <!DOCTYPE html>
@@ -53,7 +56,7 @@ function generateHTML(answers) {
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
+    
     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
       <li class="list-group-item">My GitHub username is ${answers.github}</li>
@@ -71,6 +74,11 @@ async function init() {
     const answers = await promptUser();
 
     const html = generateHTML(answers);
+    // const profile = getProfile(answers);
+    const queryUrl = "https://api.github.com/users/" + answers.github;
+
+    console.log(queryUrl);
+
 
     await writeFileAsync("index.html", html);
 
