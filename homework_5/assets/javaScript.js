@@ -17,13 +17,11 @@
 var today = moment().format( 'dddd, MMMM Do')
 $('#displayDate').text(today);
 
-
-//Present Today's date
-var today = moment().format( 'dddd, MMMM Do');
-$('#displayDate').text(today);
-
 //If statement to color code rows
 var todaysTime = moment().format('LT');
+var time = moment();
+
+
 
 var nine = "hh:mm:ss";
 nine = '09:00 am';
@@ -34,7 +32,6 @@ console.log(nine);
  //Can't solve the comparing times to change background
 
 //Need to set variable to time and compare in loop
-
 
 
 
@@ -94,5 +91,57 @@ var schedule = {
   fourActivity: fourInput.value,
   fiveActivity: fiveInput.value,
 }
+
+
+
+
+var timesArray = ['9:00','10:00','11:00','12:00']
+
+
+  timesArray.forEach(function(element, i){
+
+  var idString = element.split(":")[0].toString();
+
+//this is where we would compare & manipulate time so we can set color attribute on this html string
+//////////
+
+function colorBasedOnTimeCompare (){
+
+  var time = moment();
+
+   if(time){
+     
+    //compare times
+    //if number is blah blah then color is red
+
+    return "red" ;
+   }
+
+   else {
+
+     return "white"
+   }
+
+
+}
+
+  var htmlRow = "<tr><td class= 'time-field' nowrap='nowrap' style = 'color: " + colorBasedOnTimeCompare()  + "'>" + "<label>" + element + "</label><input type='text' id='" +  idString + "Input'  name='nine' ><button id='" + idString + "Btn'>Save</button></td></tr>"
+
+  console.log(htmlRow)
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -66,13 +66,12 @@ body {
 }
 
 h1 {
-  Position: relative
+  Position: relative;
   margin-bottom: 0px;
   font-size: 36px;
   line-height: 45px;
   color:  #4aaaa5;
   Padding-bottom: 5px;
-  
 }
 
 p {
@@ -137,9 +136,6 @@ input[type=submit] {
   cursor: pointer;
 }
 
-
-}
-
 div.container {
   border-radius: 5px;
   background-color: 4aaaa5;
@@ -174,5 +170,9 @@ div.container {
   color: white;
   text-align: center;
   border-top: 8px solid #4aaaa5;
-  
+}
+
+.gallery {
+align-content: center;
+
 }
