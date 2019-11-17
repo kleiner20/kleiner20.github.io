@@ -81,8 +81,9 @@ async function init() {
     console.log(queryUrl);
 
     axios.get(queryUrl).then(function(response) {
-    console.log(response);
+    console.log(response.data.id);
 
+    
     });  
 
     await writeFileAsync("index.html", html);
