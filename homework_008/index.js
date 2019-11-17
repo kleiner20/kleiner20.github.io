@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const axios = require("axios");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -74,11 +75,15 @@ async function init() {
     const answers = await promptUser();
 
     const html = generateHTML(answers);
+
     // const profile = getProfile(answers);
     const queryUrl = "https://api.github.com/users/" + answers.github;
-
     console.log(queryUrl);
 
+    axios.get(queryUrl).then(function(response) {
+    console.log(response);
+
+    });  
 
     await writeFileAsync("index.html", html);
 
