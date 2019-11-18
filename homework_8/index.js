@@ -9,6 +9,11 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
+      name: "name",
+      message: "What is your name?"
+    },
+    {
+      type: "input",
       name: "github",
       message: "Enter your GitHub Username"
     },
@@ -19,28 +24,19 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "hobby",
-      message: "What is your favorite hobby?"
-    },
-    {
-      type: "input",
-      name: "food",
-      message: "What is your favorite food?"
-    },
-    {
-      type: "input",
       name: "linkedin",
       message: "Enter your LinkedIn URL."
     }
   ]);
 }
-function getProfile(answers){
+function getProfile(response){
 
-  const queryUrl = "https://api.github.com/users/" + answers.github;
-
-  console.log(queryUrl);
+       //user name
+       var userID = response.data.id;
+       console.log(userID);
+       $(".userID").text("My user ID is " + userID);
  
-  var githubToken = process.env.GITHUB_TOKEN;
+  // var githubToken = process.env.GITHUB_TOKEN;
  
  };
 function generateHTML(answers) {
@@ -54,17 +50,21 @@ function generateHTML(answers) {
   <title>Document</title>
 </head>
 <body>
+
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
+    <h1 class="display-4">I can pull the github api, but not represent the data in the literal</h1>
     
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    
+    <h3>Links <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
       <li class="list-group-item">My GitHub username is ${answers.github}</li>
       <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
     </ul>
   </div>
 </div>
+<script src="index.js"></script>
 </body>
 </html>`;
 }
@@ -83,11 +83,13 @@ async function init() {
     axios.get(queryUrl).then(function(response) {
     console.log(response);
 
+
     });  
 
     await writeFileAsync("index.html", html);
 
     console.log("Successfully wrote to index.html");
+ 
   } catch (err) {
     console.log(err);
   }
