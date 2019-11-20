@@ -45,17 +45,6 @@ function generateHTML(employees) {
   <title>Document</title>
 </head>
 <body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h3 class="display-4">${employees.name}</h3>
-    <h3>${employees.title} <span class="badge badge-secondary">Contact Info</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">ID: ${employees.id}</li>
-      <li class="list-group-item">Email: ${employees.email}</li>
-      <li class="list-group-item">GitHub: ${employees.office}</li>
-    </ul>
-  </div>
-</div>
 <div class="bg-primary mb-3" style="max-width: 18rem;">
   <div class="card-header card text-white"><h3>${employees.name}</h3>
   <p><h3>${employees.title}</h3></p></div>
