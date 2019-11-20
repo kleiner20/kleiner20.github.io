@@ -56,12 +56,23 @@ function generateHTML(employees) {
     </ul>
   </div>
 </div>
+<div class="bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header card text-white"><h3>${employees.name}</h3>
+  <p><h3>${employees.title}</h3></p></div>
+  <div class="card-body text-black">
+    <ul class="list-group">
+      <li class="list-group-item text-black">ID: ${employees.id}</li>
+      <li class="list-group-item">Email: ${employees.email}</li>
+      <li class="list-group-item">GitHub: ${employees.office}</li>
+    </ul>
+  </div>
+</div>
 </body>
 </html>`;
 }
 
 async function init() {
-  console.log("hi");
+  console.log("Please enter your employee information");
   try {
     const employees = await promptUser();
 
