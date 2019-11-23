@@ -39,7 +39,7 @@ function getProfile(response){
   // var githubToken = process.env.GITHUB_TOKEN;
  
  };
-function generateHTML(answers) {
+function generateHTML(answers, myGitInfo) { console.log(myGitInfo.bio);
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@ function generateHTML(answers) {
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <h1 class="display-4">I can pull the github api, but not represent the data in the literal</h1>
+    <h1 class="display-4">I can pull the ${myGitInfo.bio} but not represent the data in the literal</h1>
     
     
     <h3>Links <span class="badge badge-secondary">Contact Me</span></h3>
@@ -74,17 +74,12 @@ async function init() {
   try {
     const answers = await promptUser();
 
-    const html = generateHTML(answers);
-
     // const profile = getProfile(answers);
-    const queryUrl = "https://api.github.com/users/" + answers.github;
-    console.log(queryUrl);
+    const myGitInfo = await axios.get("https://api.github.com/users/" + answers.github);
+   
 
-    axios.get(queryUrl).then(function(response) {
-    console.log(response);
-
-
-    });  
+    const html = await generateHTML(answers, myGitInfo.data);
+   
 
     await writeFileAsync("index.html", html);
 
